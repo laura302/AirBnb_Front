@@ -9,9 +9,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+        'airbnb': '#ff385c',
+        'airbnb-Dark': '#d50027'
+      }
     },
   },
   plugins: [],
