@@ -13,7 +13,7 @@ const ReservationSidebar = () => {
                 </select>
             </div>
 
-            <div className="w-full mb-6 py-6 text-center text-while bg-airbnb hover:bg-airbnb-dark rounded-xl">Book</div>
+            <div className="w-full mb-6 py-6 text-center text-while bg-airbnb hover:bg-airbnb-Dark rounded-xl">Book</div>
 
             <div className="mb-4 flex justify-between align-center">
                 <p>$200 * 4 nignts</p>
