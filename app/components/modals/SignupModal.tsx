@@ -6,8 +6,8 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import CustomButton from "../forms/CustomButton";
 import apiService from "@/app/services/apiService";
-import useSignupModal from "@/app/hooks/useSingupModal";
 import { handleLogin } from "@/app/lib/actions";
+import useSignupModal from "@/app/hooks/useSingupModal";
 
 const SignupModal = () => {
     //
@@ -30,7 +30,7 @@ const SignupModal = () => {
             password2: password2
         }
 
-        const response = await apiService.post('/api/auth/register/', JSON.stringify(formData));
+        const response = await apiService.postWithoutToken('/api/auth/register/', JSON.stringify(formData));
 
         if (response.access) {
             handleLogin(response.user.pk, response.access, response.refresh);
