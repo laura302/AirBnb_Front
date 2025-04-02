@@ -4,10 +4,10 @@ import Modal from "./Modal";
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import useSignupModal from "@/app/hooks/useSingupModal";
 import CustomButton from "../forms/CustomButton";
 import apiService from "@/app/services/apiService";
 import { handleLogin } from "@/app/lib/actions";
-import useSignupModal from "@/app/hooks/useSingupModal";
 
 const SignupModal = () => {
     //

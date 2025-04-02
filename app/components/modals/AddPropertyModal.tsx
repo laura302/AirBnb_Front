@@ -1,21 +1,22 @@
 'use client';
 
-import Image from "next/image";
+import Image from 'next/image';
 
-import { ChangeEvent, useState } from "react";
-import Modal from "./Modal";
-import CustomButton from "../forms/CustomButton";
+import { ChangeEvent, useState } from 'react';
+import Modal from './Modal';
+import CustomButton from '../forms/CustomButton';
 import Categories from '../addproperty/Categories';
 
-import useAddPropertyModal from "@/app/hooks/useAddPropertyModal";
-import SelectCountry, { SelectCountryValue } from "../forms/SelectCountry";
+import useAddPropertyModal from '@/app/hooks/useAddPropertyModal';
+import SelectCountry, {SelectCountryValue} from '../forms/SelectCountry';
 
-import apiService from "@/app/services/apiService";
-import { useRouter } from "next/navigation";
+import apiService from '@/app/services/apiService';
+import { useRouter } from 'next/navigation';
 
 const AddPropertyModal = () => {
     //
     // States
+
     const [currentStep, setCurrentStep] = useState(1);
     const [errors, setErrors] = useState<string[]>([]);
     const [dataCategory, setDataCategory] = useState('');
@@ -26,7 +27,7 @@ const AddPropertyModal = () => {
     const [dataBathrooms, setDataBathrooms] = useState('');
     const [dataGuests, setDataGuests] = useState('');
     const [dataCountry, setDataCountry] = useState<SelectCountryValue>();
-    const [dataImage, setDataImage] = useState<File | null>(null);    
+    const [dataImage, setDataImage] = useState<File | null>(null);
 
     //
     //
@@ -35,7 +36,7 @@ const AddPropertyModal = () => {
     const router = useRouter();
 
     //
-    // set datas
+    // Set datas
 
     const setCategory = (category: string) => {
         setDataCategory(category)
@@ -49,7 +50,7 @@ const AddPropertyModal = () => {
         }
     }
 
-     //
+    //
     // SUbmit
 
     const submitForm = async () => {
@@ -94,7 +95,6 @@ const AddPropertyModal = () => {
             }
         }
     }
-
 
     //
     //
@@ -291,7 +291,6 @@ const AddPropertyModal = () => {
             />
         </>
     )
-
 }
 
 export default AddPropertyModal;
