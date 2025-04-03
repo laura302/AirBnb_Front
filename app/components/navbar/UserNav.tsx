@@ -8,7 +8,6 @@ import LogoutButton from "../LogoutButton";
 
 import useLoginModal from "@/app/hooks/useLoginModal";
 import useSignupModal from "@/app/hooks/useSingupModal";
-
 interface UserNavProps {
     userId?: string | null;
 }
